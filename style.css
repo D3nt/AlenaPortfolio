@@ -1,0 +1,104 @@
+
+/*Webkit based plug-ins*/
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* mobile screen */
+@media only screen and (max-width: 800px) /* Mobile */ {
+  body {
+    background: green;
+  }
+  .horizontalScroll {
+    width: 200vh;
+    height: 200vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #FFFFFF;
+    padding: 30px;
+    -webkit-transform-origin: top top;
+            transform-origin: top top;
+  }
+  .horizontalScroll > * {
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transform: rotate(0deg) translate3d(0, calc(-100vh + 60px), 0);
+            transform: rotate(0deg) translate3d(0, calc(-100vh + 60px), 0);
+  }
+  .item {
+    width: calc(100vh - 60px);
+    height: calc(100vh - 60px);
+    background: #FDF3FC;
+    position: relative;
+  }
+  .item:not(:first-child) {
+    margin-top: 10px;
+  }
+  .item .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: no-repeat center center / cover;
+    opacity: .8;
+    background-blend-mode: luminosity;
+  }
+
+}
+/* desktop screen */
+@media only screen and (min-width: 801px) /* Desktop */ {
+  body {
+    background: red;
+  }
+  
+  .horizontalScroll {
+    width: 100vh;
+    height: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #252e2e;
+    padding: 30px;
+    -webkit-transform-origin: right top;
+            transform-origin: right top;
+    -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
+            transform: rotate(-90deg) translate3d(0, -100vh, 0);
+  }
+  .horizontalScroll > * {
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+            transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+  }
+  .item {
+    width: calc(100vh - 60px);
+    height: calc(100vh - 60px);
+    background: #FDF3FC;
+    position: relative;
+  }
+  .item:not(:first-child) {
+    margin-top: 10px;
+  }
+  .item .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: no-repeat center center / cover;
+    opacity: .8;
+    background-blend-mode: luminosity;
+  }
+}
