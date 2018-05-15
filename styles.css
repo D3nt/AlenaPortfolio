@@ -1,85 +1,88 @@
 /* Main HTML Styles */
-html, body {
+/* Common Properties */
+html, body, footer, header {
   background-color: #141414;
-  color: #707070
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: #707070;
+}
+/* Unique Properties */
+footer {
+  height: 704px;
+  padding: 52px;
+}
+footer img {
+  width:17px;
+  height:13px;
+  padding-left: 10px;
 }
 
-footer,
 header {
-  background-color: #141414;
   height: 90px;
 }
 
 main {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  padding: 50px;
+  padding: 52px;
+  padding-top: 271px
 }
 
 main h1,
-main p {
+main p ,
+main h5{
   margin: 0 auto;
   padding: 0.1% 0;
 }
-
-main h5{
-  font-family: 'Roboto';
-  margin: auto auto;
-  font-size: 18px;
-}
-
+/* Text Highlights */
 #outlinewhite {
     color: #FFFFFF;
 }
 
 /* Navigation Style Control */
 nav {
-  font-family: 'Roboto', sans-serif;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.9);
   height: 0;
-  left: 0;
   overflow-x: hidden;
   overflow-y: hidden;
   position: absolute;
-  top: 0;
-  transition: 0.2s;
+  transition: 0.5s;
   width: 100%;
-  z-index: 5;
+  z-index: 1;
 }
+
 nav .nav-content {
-  padding: 50px 75px;
+  padding: 1%;
   text-align: center;
 }
+
 nav .nav-content a {
-  color: #fff;
+  color: #FFFFFF;
   display: block;
   font-size: 36px;
-  padding: 8px;
   text-decoration: none;
 }
 
+/*Common elements can be optimized*/
 #topmenubutton {
-  font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
   background: none;
   border: 0;
+  color: #FFFFFF;
   cursor: pointer;
+  float: right;
   font-size: 40px;
   outline: 0;
   padding: 1%;
-  float: right;
 }
+
 #designername {
-  font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
   background: none;
   border: 0;
-  cursor: pointer;
-  font-size: 16px;
+  color: #FFFFFF;
+  cursor: default;
+  float:left;
   outline: 0;
   padding: 1%;
-  float:left;
 }
 
 #close-menu {
@@ -88,92 +91,83 @@ nav .nav-content a {
   color: #FFFFFF;
   cursor: pointer;
   display: none;
+  float: right;
   font-size: 40px;
   outline: 0;
   padding: 1%;
-  float: right;
 }
 
-body.open {
-  overflow-y: hidden;
-}
-body.open nav {
-  overflow-y: auto;
-}
 body.open #close-menu {
   display: block;
 }
 
 /*Animation for About Me Wrapping Text*/
-.sentence-wrapper{
-    font-family: 'Roboto', sans-serif;
-    position: relative;
+.animation-sentence{
     margin: 0 auto;
     padding: 1% 0;
+    position: relative;
 }
 .sentence{
     margin: 0;
     text-align: left;
 }
 .sentence span{
-    color: #141414;
-    font-size: 100%;
     font-weight: normal;
 }
-.words{
+.compliments{
     display: inline;
 }
-.words-1 span{
-    position: absolute;
+.compliments-1 span{
+    color: #FFFFFF;
+    margin-left: 5px;
     opacity: 0;
     overflow: hidden;
-    margin-left: 5px;
-    color: #FFFFFF;
+    position: absolute;
     -webkit-animation: rotateWord 18s linear infinite 0s;
     -moz-animation: rotateWord 18s linear infinite 0s;
     -o-animation: rotateWord 18s linear infinite 0s;
     -ms-animation: rotateWord 18s linear infinite 0s;
     animation: rotateWord 18s linear infinite 0s;
 }
-.words-1 span:nth-child(2) {
+.compliments-1 span:nth-child(2) {
+    color: #FFFFFF;
     -webkit-animation-delay: 3s;
     -moz-animation-delay: 3s;
     -o-animation-delay: 3s;
     -ms-animation-delay: 3s;
     animation-delay: 3s;
-    color: #FFFFFF;
 }
-.words-1 span:nth-child(3) {
+.compliments-1 span:nth-child(3) {
+    color: #FFFFFF;
     -webkit-animation-delay: 6s;
     -moz-animation-delay: 6s;
     -o-animation-delay: 6s;
     -ms-animation-delay: 6s;
     animation-delay: 6s;
-    color: #FFFFFF;
 }
-.words-1 span:nth-child(4) {
+.compliments-1 span:nth-child(4) {
+    color: #FFFFFF;
     -webkit-animation-delay: 9s;
     -moz-animation-delay: 9s;
     -o-animation-delay: 9s;
     -ms-animation-delay: 9s;
     animation-delay: 9s;
-    color: #FFFFFF;
 }
-.words-1 span:nth-child(5) {
+.compliments-1 span:nth-child(5) {
+    color: #FFFFFF;
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
     -ms-animation-delay: 12s;
     animation-delay: 12s;
-    color: #FFFFFF;
 }
-.words-1 span:nth-child(6) {
+.compliments-1 span:nth-child(6) {
+    color: #FFFFFF;
     -webkit-animation-delay: 15s;
     -moz-animation-delay: 15s;
     -o-animation-delay: 15s;
     -ms-animation-delay: 15s;
     animation-delay: 15s;
-    color: #FFFFFF;
 }
 @-webkit-keyframes rotateWord {
     0% { opacity: 0; }
