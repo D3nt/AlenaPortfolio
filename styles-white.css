@@ -5,29 +5,15 @@ html, body, footer, header {
   font-family: 'Roboto';
   font-size: 16px;
   overflow-x: hidden;
-  overflow-y: hidden;
   color: #BFBFBF;
-}
-/* Unique Properties */
-footer {
-  height: 704px;
-  padding: 52px;
-}
-footer img {
-  width:17px;
-  height:13px;
-  padding-left: 10px;
-}
-
-header {
-  height: 90px;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*Project Caption*/
 #project-caption{
   position: absolute;
   height: 122px;
-  width: 490px;
+  max-width: 490px;
   left: 102px;
   top: 252px;
   font-size: 103px;
@@ -39,17 +25,18 @@ header {
 #project-subcaption{
   position: absolute;
   height: 19px;
-  width: 255px;
+  max-width: 255px;
   left: 87px;
   top: 233px;
   font-size: 16px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 #project-description{
   position: absolute;
   height: 66px;
-  width: 329px;
+  max-width: 329px;
   left: 152px;
   top: 404px;
   font-size: 14px;
@@ -59,7 +46,7 @@ header {
 main img{
   position: absolute;
   height: 491px;
-  width: 380px;
+  max-width: 380px;
   left: 522px;
   top: 145px;
 }
@@ -72,7 +59,7 @@ nav {
   overflow-y: hidden;
   position: absolute;
   transition: 0.5s;
-  width: 100%;
+  max-width: 100%;
   z-index: 1;
 }
 
@@ -119,6 +106,13 @@ nav .nav-content a {
   font-size: 40px;
   outline: 0;
   padding: 1%;
+}
+
+#page1{
+  display: block;
+}
+#page2{
+  display: none;
 }
 
 body.open #close-menu {

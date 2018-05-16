@@ -5,6 +5,8 @@
   <p id="designername">ALENA ILCHENKO</p>
   <button id="topmenubutton">=</button>
   <script type="text/javascript" src="scripts.js"></script>
+  <script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+  <link href="onepage-scroll.css" rel="stylesheet" type='text/css'>
   <nav id="nav">
     <button id="close-menu">&times;</button>
     <div class="nav-content">
@@ -12,14 +14,41 @@
       <a href="index.html">Work</a>
     </div>
   </nav>
+  <script>
+  $(document).ready(function(){
+    $(".main").onepage_scroll({
+      sectionContainer: "section",
+      responsiveFallback: 600,
+      loop: true
+    });
+  });
+</script>
 </header>
 <main>
-  <span id="project-subcaption">REDESIGN</span>
-  <span id="project-caption">Citi</span>
-  <span id="project-description">Some random text about the project and its description
-     described in a separate paragraph underneath the subcaption and caption
-   of the main project title.</span>
-   <img src="stacys1.jpg">
+  <div id="page1">
+   <section class="section1">
+     <span>
+      <span id="project-subcaption">Redesign</span>
+      <span id="project-caption">Citi</span>
+      <span id="project-description">Some random text about the project and its description
+         described in a separate paragraph underneath the subcaption and caption
+       of the main project title.</span>
+       <img src="stacys1.jpg">
+     </span>
+   </section>
+ </div>
+  <div id="page2">
+   <section class="section2">
+     <span>
+      <span id="project-subcaption">Second Project</span>
+      <span id="project-caption">Project 2</span>
+      <span id="project-description">Some new random text about the project and its description
+        described in a separate paragraph underneath the subcaption and caption
+      of the main project title.</span>
+      <img src="stacys2.png">
+    </span>
+   </section>
+ </div>
 </main>
 <footer></footer>
 </html>
