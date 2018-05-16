@@ -4,7 +4,6 @@ html, body, footer, header {
   background-color: #FFFFFF;
   font-family: 'Roboto';
   font-size: 16px;
-  overflow-x: hidden;
   color: #BFBFBF;
   -webkit-font-smoothing: antialiased;
 }
@@ -13,7 +12,7 @@ html, body, footer, header {
 #project-caption{
   position: absolute;
   height: 122px;
-  max-width: 490px;
+  width: 490px;
   left: 102px;
   top: 252px;
   font-size: 103px;
@@ -25,7 +24,7 @@ html, body, footer, header {
 #project-subcaption{
   position: absolute;
   height: 19px;
-  max-width: 255px;
+  width: 255px;
   left: 87px;
   top: 233px;
   font-size: 16px;
@@ -36,7 +35,7 @@ html, body, footer, header {
 #project-description{
   position: absolute;
   height: 66px;
-  max-width: 329px;
+  width: 329px;
   left: 152px;
   top: 404px;
   font-size: 14px;
@@ -46,7 +45,7 @@ html, body, footer, header {
 main img{
   position: absolute;
   height: 491px;
-  max-width: 380px;
+  width: 380px;
   left: 522px;
   top: 145px;
 }
@@ -59,7 +58,7 @@ nav {
   overflow-y: hidden;
   position: absolute;
   transition: 0.5s;
-  max-width: 100%;
+  width: 100%;
   z-index: 1;
 }
 
@@ -108,13 +107,45 @@ nav .nav-content a {
   padding: 1%;
 }
 
-#page1{
-  display: block;
-}
-#page2{
-  display: none;
-}
-
 body.open #close-menu {
   display: block;
+}
+
+.onepage-pagination {
+  position: absolute;
+  top: 70%;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+}
+.onepage-pagination li a{
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+}
+
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.onepage-pagination li a.active:before{
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
 }
