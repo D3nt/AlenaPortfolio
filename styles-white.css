@@ -1,0 +1,126 @@
+/* Main HTML Styles */
+/* Common Properties */
+html, body, footer, header {
+  background-color: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: #BFBFBF;
+}
+/* Unique Properties */
+footer {
+  height: 704px;
+  padding: 52px;
+}
+footer img {
+  width:17px;
+  height:13px;
+  padding-left: 10px;
+}
+
+header {
+  height: 90px;
+}
+
+/*Project Caption*/
+#project-caption{
+  position: absolute;
+  height: 122px;
+  width: 490px;
+  left: 102px;
+  top: 252px;
+  font-size: 103px;
+  color: #222222;
+  font-weight: bold;
+}
+
+/*Project Subcaption*/
+#project-subcaption{
+  position: absolute;
+  height: 19px;
+  width: 255px;
+  left: 87px;
+  top: 233px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#project-description{
+  position: absolute;
+  height: 66px;
+  width: 329px;
+  left: 152px;
+  top: 404px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+main img{
+  position: absolute;
+  height: 491px;
+  width: 380px;
+  left: 522px;
+  top: 145px;
+}
+
+/* Navigation Style Control */
+nav {
+  background-color: black;
+  height: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  transition: 0.5s;
+  width: 100%;
+  z-index: 1;
+}
+
+nav .nav-content {
+  text-align: center;
+}
+
+nav .nav-content a {
+  color: #000000;
+  display: block;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+/*Common elements can be optimized*/
+#topmenubutton {
+  background: none;
+  border: 0;
+  color: #222222;
+  cursor: pointer;
+  float: right;
+  font-size: 40px;
+  outline: 0;
+  padding: 1%;
+}
+
+#designername {
+  background: none;
+  border: 0;
+  color: #222222;
+  cursor: default;
+  float:left;
+  outline: 0;
+  padding: 1%;
+}
+
+#close-menu {
+  background: none;
+  border: 0;
+  color: #BFBFBF;
+  cursor: pointer;
+  display: none;
+  float: right;
+  font-size: 40px;
+  outline: 0;
+  padding: 1%;
+}
+
+body.open #close-menu {
+  display: block;
+}
