@@ -26,7 +26,7 @@
     beforeMove: null,
     afterMove: null,
     loop: true,
-    responsiveFallback: true,
+    responsiveFallback: false,
     direction : 'horizontal'
   };
 
